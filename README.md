@@ -32,3 +32,11 @@ Users can install the package via the pip command:
 
 ```bash
 pip install Robotic_Arm
+```
+
+Alternatively, download the development package locally:
+```bash
+git clone https://github.com/RealManRobot/RM_API2.git
+```
+
+
