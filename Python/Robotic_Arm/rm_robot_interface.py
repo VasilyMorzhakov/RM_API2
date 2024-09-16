@@ -21,6 +21,7 @@ __version__ = '1.0.2'
 from .rm_ctypes_wrap import *
 import ctypes
 from typing import Callable
+from typing import Dict,Any,List,Tuple
 
 
 class JointConfigSettings:
@@ -261,7 +262,7 @@ class JointConfigReader:
     关节配置查询
     """
 
-    def rm_get_joint_max_speed(self) -> tuple[int, list]:
+    def rm_get_joint_max_speed(self) -> Tuple[int, list]:
         """
         查询关节最大速度
         Args:
@@ -283,7 +284,7 @@ class JointConfigReader:
         ret = rm_get_joint_max_speed(self.handle, speed)
         return ret, list(speed)
 
-    def rm_get_joint_max_acc(self) -> tuple[int, list]:
+    def rm_get_joint_max_acc(self) -> Tuple[int, list]:
         """
         查询关节最大加速度
         Args:
@@ -305,7 +306,7 @@ class JointConfigReader:
         ret = rm_get_joint_max_acc(self.handle, acc)
         return ret, list(acc)
 
-    def rm_get_joint_min_pos(self) -> tuple[int, list]:
+    def rm_get_joint_min_pos(self) -> Tuple[int, list]:
         """
         查询关节最小限位
         Args:
@@ -327,7 +328,7 @@ class JointConfigReader:
         ret = rm_get_joint_min_pos(self.handle, min_pos)
         return ret, list(min_pos)
 
-    def rm_get_joint_max_pos(self) -> tuple[int, list]:
+    def rm_get_joint_max_pos(self) -> Tuple[int, list]:
         """
         查询关节最大限位
         Args:
@@ -349,7 +350,7 @@ class JointConfigReader:
         ret = rm_get_joint_max_pos(self.handle, max_pos)
         return ret, list(max_pos)
 
-    def rm_get_joint_drive_max_speed(self) -> tuple[int, list]:
+    def rm_get_joint_drive_max_speed(self) -> Tuple[int, list]:
         """
         查询关节(驱动器)最大速度
         Args:
@@ -371,7 +372,7 @@ class JointConfigReader:
         ret = rm_get_joint_drive_max_speed(self.handle, speed)
         return ret, list(speed)
 
-    def rm_get_joint_drive_max_acc(self) -> tuple[int, list]:
+    def rm_get_joint_drive_max_acc(self) -> Tuple[int, list]:
         """
         查询关节(驱动器)最大加速度
         Args:
@@ -393,7 +394,7 @@ class JointConfigReader:
         ret = rm_get_joint_drive_max_acc(self.handle, acc)
         return ret, list(acc)
 
-    def rm_get_joint_drive_min_pos(self) -> tuple[int, list]:
+    def rm_get_joint_drive_min_pos(self) -> Tuple[int, list]:
         """
         查询关节(驱动器)最小限位
         Args:
@@ -415,7 +416,7 @@ class JointConfigReader:
         ret = rm_get_joint_drive_min_pos(self.handle, min_pos)
         return ret, list(min_pos)
 
-    def rm_get_joint_drive_max_pos(self) -> tuple[int, list]:
+    def rm_get_joint_drive_max_pos(self) -> Tuple[int, list]:
         """
         查询关节(驱动器)最大限位
         Args:
@@ -437,7 +438,7 @@ class JointConfigReader:
         ret = rm_get_joint_drive_max_pos(self.handle, max_pos)
         return ret, list(max_pos)
 
-    def rm_get_joint_en_state(self) -> tuple[int, list]:
+    def rm_get_joint_en_state(self) -> Tuple[int, list]:
         """
         获取关节使能状态
 
@@ -458,7 +459,7 @@ class JointConfigReader:
         ret = rm_get_joint_en_state(self.handle, en_state)
         return ret, list(en_state)
 
-    def rm_get_joint_err_flag(self) -> dict[str, any]:
+    def rm_get_joint_err_flag(self) -> Dict[str, any]:
         """
         获取关节错误代码
 
@@ -602,7 +603,7 @@ class ArmTipVelocityParameters:
         tag = rm_set_collision_state(self.handle, stage)
         return tag
 
-    def rm_get_collision_stage(self) -> tuple[int, int]:
+    def rm_get_collision_stage(self) -> Tuple[int, int]:
         """
         查询碰撞防护等级
 
@@ -619,7 +620,7 @@ class ArmTipVelocityParameters:
         ret = rm_get_collision_stage(self.handle, byref(stage))
         return ret, stage.value
 
-    def rm_get_arm_max_line_speed(self) -> tuple[int, float]:
+    def rm_get_arm_max_line_speed(self) -> Tuple[int, float]:
         """
         获取机械臂末端最大线速度
 
@@ -636,7 +637,7 @@ class ArmTipVelocityParameters:
         ret = rm_get_arm_max_line_speed(self.handle, byref(speed))
         return ret, speed.value
 
-    def rm_get_arm_max_line_acc(self) -> tuple[int, float]:
+    def rm_get_arm_max_line_acc(self) -> Tuple[int, float]:
         """
         获取机械臂末端最大线加速度
 
@@ -654,7 +655,7 @@ class ArmTipVelocityParameters:
         ret = rm_get_arm_max_line_acc(self.handle, byref(acc))
         return ret, acc.value
 
-    def rm_get_arm_max_angular_speed(self) -> tuple[int, float]:
+    def rm_get_arm_max_angular_speed(self) -> Tuple[int, float]:
         """
         获取机械臂末端最大角速度
 
@@ -671,7 +672,7 @@ class ArmTipVelocityParameters:
         ret = rm_get_arm_max_angular_speed(self.handle, byref(speed))
         return ret, speed.value
 
-    def rm_get_arm_max_angular_acc(self) -> tuple[int, float]:
+    def rm_get_arm_max_angular_acc(self) -> Tuple[int, float]:
         """
         获取机械臂末端最大角加速度
 
@@ -807,7 +808,7 @@ class ToolCoordinateConfig:
         tag = rm_update_tool_frame(self.handle, frame)
         return tag
 
-    def rm_get_total_tool_frame(self) -> dict[str, any]:
+    def rm_get_total_tool_frame(self) -> Dict[str, any]:
         """
         获取所有工具坐标系名称
 
@@ -835,7 +836,7 @@ class ToolCoordinateConfig:
 
         return result_dict
 
-    def rm_get_given_tool_frame(self, tool_name: str) -> tuple[int, dict[str, any]]:
+    def rm_get_given_tool_frame(self, tool_name: str) -> Tuple[int, dict[str, any]]:
         """
         获取指定工具坐标系
 
@@ -858,7 +859,7 @@ class ToolCoordinateConfig:
 
         return ret, tool_frame.to_dictionary()
 
-    def rm_get_current_tool_frame(self) -> tuple[int, dict[str, any]]:
+    def rm_get_current_tool_frame(self) -> Tuple[int, Dict[str, any]]:
         """
         获取当前工具坐标系。
 
@@ -898,7 +899,7 @@ class ToolCoordinateConfig:
         ret = rm_set_tool_envelope(self.handle, envelope)
         return ret
 
-    def rm_get_tool_envelope(self, tool_name: str) -> tuple[int, dict[str, any]]:
+    def rm_get_tool_envelope(self, tool_name: str) -> Tuple[int, Dict[str, any]]:
         """
         获取工具坐标系的包络参数
 
@@ -1026,7 +1027,7 @@ class WorkCoordinateConfig:
         tag = rm_update_work_frame(self.handle, name, frame_pose)
         return tag
 
-    def rm_get_total_work_frame(self) -> dict[str, any]:
+    def rm_get_total_work_frame(self) -> Dict[str, any]:
         """
         获取所有工作坐标系名称
 
@@ -1053,7 +1054,7 @@ class WorkCoordinateConfig:
 
         return result_dict
 
-    def rm_get_given_work_frame(self, name: str) -> tuple[int, list[float]]:
+    def rm_get_given_work_frame(self, name: str) -> Tuple[int, List[float]]:
         """
         获取指定工作坐标系
 
@@ -1076,7 +1077,7 @@ class WorkCoordinateConfig:
         euler = work_frame.euler
         return ret, [position.x, position.y, position.z, euler.rx, euler.ry, euler.rz]
 
-    def rm_get_current_work_frame(self) -> tuple[int, dict[str, any]]:
+    def rm_get_current_work_frame(self) -> Tuple[int, Dict[str, any]]:
         """
         获取当前工作坐标系
 
@@ -1101,7 +1102,7 @@ class ArmState:
     机械臂状态获取
     """
 
-    def rm_get_current_arm_state(self) -> tuple[int, dict[str, any]]:
+    def rm_get_current_arm_state(self) -> Tuple[int, Dict[str, any]]:
         """
         获取机械臂当前状态
 
@@ -1120,7 +1121,7 @@ class ArmState:
 
         return ret, state.to_dictionary(self.arm_dof if self.arm_dof != 0 else ARM_DOF)
 
-    def rm_get_current_joint_temperature(self) -> tuple[int, list[float]]:
+    def rm_get_current_joint_temperature(self) -> Tuple[int, List[float]]:
         """
         获取关节当前温度
 
@@ -1141,7 +1142,7 @@ class ArmState:
         ret = rm_get_current_joint_temperature(self.handle, temperature)
         return ret, list(temperature)
 
-    def rm_get_current_joint_current(self) -> tuple[int, list[float]]:
+    def rm_get_current_joint_current(self) -> Tuple[int, List[float]]:
         """
         获取关节当前电流
 
@@ -1162,7 +1163,7 @@ class ArmState:
         ret = rm_get_current_joint_current(self.handle, current)
         return ret, list(current)
 
-    def rm_get_current_joint_voltage(self) -> tuple[int, list[float]]:
+    def rm_get_current_joint_voltage(self) -> Tuple[int, List[float]]:
         """
         获取关节当前电压
 
@@ -1183,7 +1184,7 @@ class ArmState:
         ret = rm_get_current_joint_voltage(self.handle, voltage)
         return ret, list(voltage)
 
-    def rm_set_init_pose(self, joint: list[float]) -> int:
+    def rm_set_init_pose(self, joint: List[float]) -> int:
         """
         设置机械臂的初始位置角度
 
@@ -1207,7 +1208,7 @@ class ArmState:
 
         return tag
 
-    def rm_get_init_pose(self) -> tuple[int, list[float]]:
+    def rm_get_init_pose(self) -> Tuple[int, List[float]]:
         """
         获取机械臂初始位置角度
 

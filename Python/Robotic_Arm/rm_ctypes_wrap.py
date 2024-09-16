@@ -24,6 +24,8 @@ import glob
 import ctypes.util
 import ctypes
 import sys
+from typing import Tuple
+from typing import Dict, Any,List
 from ctypes import *  # noqa: F401, F403
 # @cond HIDE_PRIVATE_CLASSES
 _int_types = (ctypes.c_int16, ctypes.c_int32)
@@ -1351,7 +1353,7 @@ class rm_frame_t(Structure):
         ('z', c_float),
     ]
 
-    def __init__(self, frame_name: str = None, pose: tuple[float, float, float, float, float, float] = None, payload: float = None, x: float = None, y: float = None, z: float = None):
+    def __init__(self, frame_name: str = None, pose: Tuple[float, float, float, float, float, float] = None, payload: float = None, x: float = None, y: float = None, z: float = None):
         """
 
         Args:
@@ -1387,7 +1389,7 @@ class rm_frame_t(Structure):
             self.y = y
             self.z = z
 
-    def to_dictionary(self) -> dict[str, any]:
+    def to_dictionary(self) -> Dict[str, Any]:
         """将rm_frame_t对象转换为字典表现形式
 
         Returns:
@@ -2270,7 +2272,7 @@ class rm_waypoint_t(Structure):
         ('time', c_char * int(50)),
     ]
 
-    def __init__(self, point_name: str = None, joint: list[float] = None, pose: list[float] = None, work_frame: str = None, tool_frame: str = None, time: str = ''):
+    def __init__(self, point_name: str = None, joint: List[float] = None, pose: List[float] = None, work_frame: str = None, tool_frame: str = None, time: str = ''):
         """
         全局路点结构体初始化
 
@@ -2833,7 +2835,7 @@ class rm_inverse_kinematics_params_t(Structure):
         ('flag', uint8_t),
     ]
 
-    def __init__(self, q_in: list[float] = None, q_pose: list[float] = None, flag: int = None):
+    def __init__(self, q_in: List[float] = None, q_pose: List[float] = None, flag: int = None):
         """逆运动学参数初始化
 
         Args:
