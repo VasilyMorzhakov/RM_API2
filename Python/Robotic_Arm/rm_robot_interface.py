@@ -268,7 +268,7 @@ class JointConfigReader:
         Args:
             无。
         Returns:
-            tuple[int, list]: 包含两个元素的元组。
+            Tuple[int, list]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -290,7 +290,7 @@ class JointConfigReader:
         Args:
             无。
         Returns:
-            tuple[int, list]: 包含两个元素的元组。
+            Tuple[int, list]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -312,7 +312,7 @@ class JointConfigReader:
         Args:
             无。
         Returns:
-            tuple[int, list]: 包含两个元素的元组。
+            Tuple[int, list]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -334,7 +334,7 @@ class JointConfigReader:
         Args:
             无。
         Returns:
-            tuple[int, list]: 包含两个元素的元组。
+            Tuple[int, list]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -356,7 +356,7 @@ class JointConfigReader:
         Args:
             无。
         Returns:
-            tuple[int, list]: 包含两个元素的元组。
+            Tuple[int, list]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -378,7 +378,7 @@ class JointConfigReader:
         Args:
             无。
         Returns:
-            tuple[int, list]: 包含两个元素的元组。
+            Tuple[int, list]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -400,7 +400,7 @@ class JointConfigReader:
         Args:
             无。
         Returns:
-            tuple[int, list]: 包含两个元素的元组。
+            Tuple[int, list]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -422,7 +422,7 @@ class JointConfigReader:
         Args:
             无。
         Returns:
-            tuple[int, list]: 包含两个元素的元组。
+            Tuple[int, list]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -443,7 +443,7 @@ class JointConfigReader:
         获取关节使能状态
 
         Returns:
-            tuple[int, list]: 包含两个元素的元组。
+            Tuple[int, list]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -470,9 +470,9 @@ class JointConfigReader:
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - 'err_flag' (list[float]): 浮点数列表，表示每个关节的错误标志。
+            - 'err_flag' (List[float]): 浮点数列表，表示每个关节的错误标志。
               如果arm_dof不为0，则列表长度为arm_dof；否则，使用默认的ARM_DOF长度。
-            - 'brake_state' (list[float]): 浮点数列表，表示每个关节的抱闸状态。
+            - 'brake_state' (List[float]): 浮点数列表，表示每个关节的抱闸状态。
               如果arm_dof不为0，则列表长度为arm_dof；否则，使用默认的ARM_DOF长度。
         """
         if (self.arm_dof != 0):
@@ -608,7 +608,7 @@ class ArmTipVelocityParameters:
         查询碰撞防护等级
 
         Returns:
-            tuple[int,int]: 包含两个元素的元组。
+            Tuple[int,int]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -625,7 +625,7 @@ class ArmTipVelocityParameters:
         获取机械臂末端最大线速度
 
         Returns:
-            tuple[int,float]: 包含两个元素的元组。
+            Tuple[int,float]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -642,7 +642,7 @@ class ArmTipVelocityParameters:
         获取机械臂末端最大线加速度
 
         Returns:
-            tuple[int,float]: 包含两个元素的元组。
+            Tuple[int,float]: 包含两个元素的元组。
 
             - int: 函数执行的状态码。
                 - 0: 成功。
@@ -660,7 +660,7 @@ class ArmTipVelocityParameters:
         获取机械臂末端最大角速度
 
         Returns:
-            tuple[int,float]: 包含两个元素的元组。
+            Tuple[int,float]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -677,7 +677,7 @@ class ArmTipVelocityParameters:
         获取机械臂末端最大角加速度
 
         Returns:
-            tuple[int,float]: 包含两个元素的元组。
+            Tuple[int,float]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -813,14 +813,14 @@ class ToolCoordinateConfig:
         获取所有工具坐标系名称
 
         Returns:
-            dict[str, any]: 包含以下键值的字典:
+            Dict[str, any]: 包含以下键值的字典:
             - 'return_code' (int): 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，接收到的数据格式不正确或不完整。
-            - 'tool_names' (list[str]): 字符串列表，表示所有工具坐标系名称。
+            - 'tool_names' (List[str]): 字符串列表，表示所有工具坐标系名称。
             - 'len' (int): 工具坐标系名称数量。
         """
         names = (rm_frame_name_t*10)()
@@ -836,7 +836,7 @@ class ToolCoordinateConfig:
 
         return result_dict
 
-    def rm_get_given_tool_frame(self, tool_name: str) -> Tuple[int, dict[str, any]]:
+    def rm_get_given_tool_frame(self, tool_name: str) -> Tuple[int, Dict[str, any]]:
         """
         获取指定工具坐标系
 
@@ -844,7 +844,7 @@ class ToolCoordinateConfig:
             tool_name (str): 工具坐标系名称。
 
         Returns:
-            tuple: 包含两个元素的元组。
+            Tuple: 包含两个元素的元组。
                 - int: 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -867,7 +867,7 @@ class ToolCoordinateConfig:
             无。
 
         Returns:
-            tuple: 包含两个元素的元组。
+            Tuple: 包含两个元素的元组。
                 - int: 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -907,7 +907,7 @@ class ToolCoordinateConfig:
             tool_name (string): 工具坐标系名称
 
         Returns:
-            tuple: 包含两个元素的元组。
+            Tuple: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回设置失败，可能是参数错误或控制器发生错误。
@@ -1032,14 +1032,14 @@ class WorkCoordinateConfig:
         获取所有工作坐标系名称
 
         Returns:
-            dict[str, any]: 包含以下键值的字典:
+            Dict[str, any]: 包含以下键值的字典:
             - 'return_code' (int): 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，接收到的数据格式不正确或不完整。
-            - 'tool_names' (list[str]): 字符串列表，表示所有工作坐标系名称。
+            - 'tool_names' (List[str]): 字符串列表，表示所有工作坐标系名称。
             - 'len' (int): 工作坐标系名称数量。
         """
         len_ = c_int()
@@ -1062,7 +1062,7 @@ class WorkCoordinateConfig:
             name (str): 指定的工作坐标系名称
 
         Returns:
-            tuple[int, list[float]]: 包含两个元素的元组。
+            Tuple[int, List[float]]: 包含两个元素的元组。
                 - int: 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -1082,7 +1082,7 @@ class WorkCoordinateConfig:
         获取当前工作坐标系
 
         Returns:
-            tuple[int, dict[str, any]]: 包含两个元素的元组。
+            Tuple[int, Dict[str, any]]: 包含两个元素的元组。
                 - int: 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -1107,7 +1107,7 @@ class ArmState:
         获取机械臂当前状态
 
         Returns:
-            tuple[int, dict[str,any]]: 包含两个元素的元组。
+            Tuple[int, Dict[str,any]]: 包含两个元素的元组。
                 - int: 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -1126,7 +1126,7 @@ class ArmState:
         获取关节当前温度
 
         Returns:
-            tuple[int, list[float]]: 包含两个元素的元组。
+            Tuple[int, List[float]]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -1147,7 +1147,7 @@ class ArmState:
         获取关节当前电流
 
         Returns:
-            tuple[int, list[float]]: 包含两个元素的元组。
+            Tuple[int, List[float]]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -1168,7 +1168,7 @@ class ArmState:
         获取关节当前电压
 
         Returns:
-            tuple[int, list[float]]: 包含两个元素的元组。
+            Tuple[int, List[float]]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -1189,7 +1189,7 @@ class ArmState:
         设置机械臂的初始位置角度
 
         Args:
-            joint (list[float]): 机械臂初始位置关节角度数组
+            joint (List[float]): 机械臂初始位置关节角度数组
 
         Returns:
             int: 函数执行的状态码。
@@ -1213,7 +1213,7 @@ class ArmState:
         获取机械臂初始位置角度
 
         Returns:
-            tuple[int, list[float]]: 包含两个元素的元组。
+            Tuple[int, List[float]]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -1229,12 +1229,12 @@ class ArmState:
         ret = rm_get_init_pose(self.handle, joint_position)
         return ret, list(joint_position)
 
-    def rm_get_joint_degree(self) -> tuple[int, list[float]]:
+    def rm_get_joint_degree(self) -> Tuple[int, List[float]]:
         """
         获取当前关节角度
 
         Returns:
-            tuple[int, list[float]]: 包含两个元素的元组。
+            Tuple[int, List[float]]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -1250,12 +1250,12 @@ class ArmState:
         ret = rm_get_joint_degree(self.handle, joint_degree)
         return ret, list(joint_degree)
 
-    def rm_get_arm_all_state(self) -> tuple[int, dict[str, any]]:
+    def rm_get_arm_all_state(self) -> Tuple[int, Dict[str, any]]:
         """
         获取机械臂所有状态信息
 
         Returns:
-            tuple[int, dict[str, any]]: 包含两个元素的元组。
+            Tuple[int, Dict[str, any]]: 包含两个元素的元组。
                 - int: 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -1270,12 +1270,12 @@ class ArmState:
 
         return tag, joint_status.to_dictionary()
 
-    def rm_get_controller_rs485_mode(self) -> dict[str, any]:
+    def rm_get_controller_rs485_mode(self) -> Dict[str, any]:
         """
         查询控制器RS485模式
 
         Returns:
-            dict[str, any]: 包含以下键值的字典:
+            Dict[str, any]: 包含以下键值的字典:
             - 'return_code' (int): 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -1303,12 +1303,12 @@ class ArmState:
 
         return result_dict
 
-    def rm_get_tool_rs485_mode(self) -> dict[str, any]:
+    def rm_get_tool_rs485_mode(self) -> Dict[str, any]:
         """
         查询工具端 RS485 模式
 
         Returns:
-            dict[str, any]: 包含以下键值的字典:
+            Dict[str, any]: 包含以下键值的字典:
             - 'return_code' (int): 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -1342,7 +1342,7 @@ class MovePlan:
     机械臂轨迹规划指令
     """
 
-    def rm_movej(self, joint: list[float], v: int, r: int, connect: int, block: int) -> int:
+    def rm_movej(self, joint: List[float], v: int, r: int, connect: int, block: int) -> int:
         """
         关节空间运动
 
@@ -1380,12 +1380,12 @@ class MovePlan:
 
         return tag
 
-    def rm_movel(self, pose: list[float], v: int, r: int, connect: int, block: int) -> int:
+    def rm_movel(self, pose: List[float], v: int, r: int, connect: int, block: int) -> int:
         """
         笛卡尔空间直线运动
 
         Args:
-            pose (list[float]): 目标位姿,位置单位：米，姿态单位：弧度
+            pose (List[float]): 目标位姿,位置单位：米，姿态单位：弧度
             v (int): 速度百分比系数，1~100
             r (int, optional): 交融半径百分比系数，0~100。
             connect (int): 轨迹连接标志
@@ -1417,12 +1417,12 @@ class MovePlan:
 
         return tag
 
-    def rm_moves(self, pose: list[float], v: int, r: int, connect: int, block: int) -> int:
+    def rm_moves(self, pose: List[float], v: int, r: int, connect: int, block: int) -> int:
         """
         样条曲线运动
 
         Args:
-            pose (list[float]): 目标位姿,位置单位：米，姿态单位：弧度
+            pose (List[float]): 目标位姿,位置单位：米，姿态单位：弧度
             v (int): 速度百分比系数，1~100
             r (int, optional): 交融半径百分比系数，0~100。
             connect (int): 轨迹连接标志
@@ -1456,13 +1456,13 @@ class MovePlan:
 
         return tag
 
-    def rm_movec(self, pose_via: list[float], pose_to: list[float], v: int, r: int, loop: int, connect: int, block: int) -> int:
+    def rm_movec(self, pose_via: List[float], pose_to: List[float], v: int, r: int, loop: int, connect: int, block: int) -> int:
         """
         笛卡尔空间圆弧运动
 
         Args:
-            pose_via (list[float]): 中间点位姿，位置单位：米，姿态单位：弧度
-            pose_to (list[float]): 终点位姿，位置单位：米，姿态单位：弧度
+            pose_via (List[float]): 中间点位姿，位置单位：米，姿态单位：弧度
+            pose_to (List[float]): 终点位姿，位置单位：米，姿态单位：弧度
             v (int): 速度百分比系数，1~100
             r (int, optional): 交融半径百分比系数，0~100。
             loop (int): 规划圈数.
@@ -1498,12 +1498,12 @@ class MovePlan:
 
         return tag
 
-    def rm_movej_p(self, pose: list[float], v: int, r: int, connect: int, block: int) -> int:
+    def rm_movej_p(self, pose: List[float], v: int, r: int, connect: int, block: int) -> int:
         """
         该函数用于关节空间运动到目标位姿
 
         Args:
-            pose (list[float]): 目标位姿，位置单位：米，姿态单位：弧度。
+            pose (List[float]): 目标位姿，位置单位：米，姿态单位：弧度。
             v (int): 速度百分比系数，1~100
             r (int, optional): 交融半径百分比系数，0~100。
             connect (int): 轨迹连接标志
@@ -1535,7 +1535,7 @@ class MovePlan:
 
         return tag
 
-    def rm_movej_canfd(self, joint: list[float], follow: bool, expand: float = 0) -> int:
+    def rm_movej_canfd(self, joint: List[float], follow: bool, expand: float = 0) -> int:
         """
         角度不经规划，直接通过CANFD透传给机械臂
         @details 角度透传到 CANFD，若指令正确，机械臂立即执行
@@ -1544,7 +1544,7 @@ class MovePlan:
             用户在使用此功能时，建议进行良好的轨迹规划，以确保机械臂的稳定运行。
             I系列有线网口周期最快可达2ms，提供了更高的实时性。
         Args:
-            joint (list[float]): 关节1~7目标角度数组,单位：°
+            joint (List[float]): 关节1~7目标角度数组,单位：°
             follow (bool): true-高跟随，false-低跟随。若使用高跟随，透传周期要求不超过 10ms。
             expand (float, optional): 如果存在通用扩展轴，并需要进行透传，可使用该参数进行透传发送。Defaults to 0.
 
@@ -1563,7 +1563,7 @@ class MovePlan:
 
         return tag
 
-    def rm_movep_canfd(self, pose: list[float], follow: bool) -> int:
+    def rm_movep_canfd(self, pose: List[float], follow: bool) -> int:
         """
         位姿不经规划，直接通过CANFD透传给机械臂
         @details 当目标位姿被透传到机械臂控制器时，控制器首先尝试进行逆解计算。
@@ -1574,7 +1574,7 @@ class MovePlan:
             用户在使用此功能时，建议进行良好的轨迹规划，以确保机械臂的稳定运行。
             I系列有线网口周期最快可达2ms，提供了更高的实时性。
         Args:
-            pose (list[float]): 位姿 (若位姿列表长度为7则认为使用四元数表达位姿，长度为6则认为使用欧拉角表达位姿)
+            pose (List[float]): 位姿 (若位姿列表长度为7则认为使用四元数表达位姿，长度为6则认为使用欧拉角表达位姿)
             follow (bool): true-高跟随，false-低跟随。若使用高跟随，透传周期要求不超过 10ms。
 
         Returns:
@@ -1785,12 +1785,12 @@ class ArmTeachMove:
         tag = rm_set_teach_frame(self.handle, frame_type)
         return tag
 
-    def rm_get_teach_frame(self) -> tuple[int, int]:
+    def rm_get_teach_frame(self) -> Tuple[int, int]:
         """
         获取示教参考坐标系
 
         Returns:
-            tuple[int,int]: 包含两个元素的元组。
+            Tuple[int,int]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -1898,12 +1898,12 @@ class ArmMotionControl:
         tag = rm_set_arm_delete_trajectory(self.handle)
         return tag
 
-    def rm_get_arm_current_trajectory(self) -> dict[str, any]:
+    def rm_get_arm_current_trajectory(self) -> Dict[str, any]:
         """
         获取当前正在规划的轨迹信息
 
         Returns:
-            dict[str,any]: 包含以下键值的字典:
+            Dict[str,any]: 包含以下键值的字典:
             - 'return_code' (int): 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -1911,7 +1911,7 @@ class ArmMotionControl:
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，接收到的数据格式不正确或不完整。
             - 'trajectory_type' (rm_arm_current_trajectory_e): 返回的规划类型
-            - 'data' (list[float]): 无规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿
+            - 'data' (List[float]): 无规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿
         """
         plan_type = rm_arm_current_trajectory_e()
 
@@ -1937,12 +1937,12 @@ class ControllerConfig:
     系统配置
     """
 
-    def rm_get_controller_state(self) -> dict[str, any]:
+    def rm_get_controller_state(self) -> Dict[str, any]:
         """
         获取控制器状态
 
         Returns:
-            dict[str,any]: 包含以下键值的字典:
+            Dict[str,any]: 包含以下键值的字典:
             - 'return_code' (int): 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -1990,12 +1990,12 @@ class ControllerConfig:
         tag = rm_set_arm_power(self.handle, power)
         return tag
 
-    def rm_get_arm_power_state(self) -> tuple[int, int]:
+    def rm_get_arm_power_state(self) -> Tuple[int, int]:
         """
         读取机械臂电源状态
 
         Returns:
-            tuple[int, int]: 包含两个元素的元组。
+            Tuple[int, int]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -2007,12 +2007,12 @@ class ControllerConfig:
         tag = rm_get_arm_power_state(self.handle, byref(power))
         return tag, power.value
 
-    def rm_get_system_runtime(self) -> dict[str, any]:
+    def rm_get_system_runtime(self) -> Dict[str, any]:
         """
         读取控制器的累计运行时间
 
         Returns:
-            dict[str, any]: 包含以下键值的字典:
+            Dict[str, any]: 包含以下键值的字典:
             - 'return_code' (int): 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -2056,18 +2056,18 @@ class ControllerConfig:
         tag = rm_clear_system_runtime(self.handle)
         return tag
 
-    def rm_get_joint_odom(self) -> tuple[int, list[float]]:
+    def rm_get_joint_odom(self) -> Tuple[int, List[float]]:
         """
         读取关节的累计转动角度
 
         Returns:
-            tuple[int, list[float]]: 包含两个元素的元组。
+            Tuple[int, List[float]]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - list[float]: 各关节累计的转动角度
+            - List[float]: 各关节累计的转动角度
         """
         if self.arm_dof != 0:
             joint_odom = (c_float * self.arm_dof)()
@@ -2092,18 +2092,18 @@ class ControllerConfig:
         tag = rm_clear_joint_odom(self.handle)
         return tag
 
-    def rm_get_arm_software_info(self) -> tuple[int, dict[str, any]]:
+    def rm_get_arm_software_info(self) -> Tuple[int, Dict[str, any]]:
         """
         读取机械臂软件信息
 
         Returns:
-            tuple[int, dict[str,any]]: 包含两个元素的元组。
+            Tuple[int, Dict[str,any]]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - dict[str,any]: 机械臂软件版本信息字典，键为rm_arm_software_version_t结构体的字段名称
+            - Dict[str,any]: 机械臂软件版本信息字典，键为rm_arm_software_version_t结构体的字段名称
         """
         version = rm_arm_software_version_t()
         ret = rm_get_arm_software_info(self.handle, byref(version))
@@ -2208,12 +2208,12 @@ class CommunicationConfig:
         tag = rm_set_RS485(self.handle, baudrate)
         return tag
 
-    def rm_get_wired_net(self) -> dict[str, any]:
+    def rm_get_wired_net(self) -> Dict[str, any]:
         """
         获取有线网卡信息，未连接有线网卡则会返回无效数据
 
         Returns:
-            dict[str,any]: 包含以下键值的字典:
+            Dict[str,any]: 包含以下键值的字典:
             - 'return_code' (int): 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -2237,18 +2237,18 @@ class CommunicationConfig:
 
         return result_dict
 
-    def rm_get_wifi_net(self) -> tuple[int, dict[str, any]]:
+    def rm_get_wifi_net(self) -> Tuple[int, Dict[str, any]]:
         """
         查询无线网卡网络信息
 
         Returns:
-            tuple[int, dict[str,any]]: 包含两个元素的元组。
+            Tuple[int, Dict[str,any]]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - dict[str,any]: 无线网络信息字典，键为rm_wifi_net_t结构体的字段
+            - Dict[str,any]: 无线网络信息字典，键为rm_wifi_net_t结构体的字段
         """
         net = rm_wifi_net_t()
         ret = rm_get_wifi_net(self.handle, byref(net))
@@ -2333,7 +2333,7 @@ class ControllerIOConfig:
         tag = rm_set_DO_state(self.handle, io_num, state)
         return tag
 
-    def rm_get_io_state(self, io_num: int) -> dict[str, any]:
+    def rm_get_io_state(self, io_num: int) -> Dict[str, any]:
         """
         获取数字 IO 状态
 
@@ -2341,7 +2341,7 @@ class ControllerIOConfig:
             io_num (int): IO 端口号，范围：1~4
 
         Returns:
-            dict[str,any]: 包含以下键值的字典:
+            Dict[str,any]: 包含以下键值的字典:
             - 'return_code' (int): 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -2365,18 +2365,18 @@ class ControllerIOConfig:
         }
         return result_dict
 
-    def rm_get_io_input(self) -> tuple[int, list[int]]:
+    def rm_get_io_input(self) -> Tuple[int, List[int]]:
         """
         获取所有 IO 输入状态
 
         Returns:
-            tuple[int, list[int]]: 包含两个元素的元组。
+            Tuple[int, List[int]]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - list[int]: 4路数字输入状态列表，1：高，0：低，-1：该端口不是输入模式
+            - List[int]: 4路数字输入状态列表，1：高，0：低，-1：该端口不是输入模式
         """
         DI = (c_int * 4)()
 
@@ -2384,17 +2384,17 @@ class ControllerIOConfig:
 
         return ret, list(DI)
 
-    def rm_get_io_output(self) -> tuple[int, list[int]]:
+    def rm_get_io_output(self) -> Tuple[int, List[int]]:
         """
         获取所有 IO 输出状态
 
         Returns:
-            tuple[int, list[int]]: 函数执行的状态码。
+            Tuple[int, List[int]]: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - list[int]: 4路数字输出状态列表，1：高，0：低，-1：该端口不是输出模式
+            - List[int]: 4路数字输出状态列表，1：高，0：低，-1：该端口不是输出模式
         """
         DO = (c_int * 4)()
 
@@ -2420,12 +2420,12 @@ class ControllerIOConfig:
         tag = rm_set_voltage(self.handle, voltage_type)
         return tag
 
-    def rm_get_voltage(self) -> tuple[int, int]:
+    def rm_get_voltage(self) -> Tuple[int, int]:
         """
         获取控制器电源输出类
 
         Returns:
-            tuple[int, int]: 函数执行的状态码。
+            Tuple[int, int]: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
@@ -2479,20 +2479,20 @@ class EffectorIOConfig:
         tag = rm_set_tool_IO_mode(self.handle, io_num, state)
         return tag
 
-    def rm_get_tool_io_state(self) -> dict[str, any]:
+    def rm_get_tool_io_state(self) -> Dict[str, any]:
         """
         获取数字 IO 状态
 
         Returns:
-            dict[str, any]: 包含以下键值的字典:
+            Dict[str, any]: 包含以下键值的字典:
             - 'return_code' (int): 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，接收到的数据格式不正确或不完整。
-            - 'IO_Mode' (list[int]): 0-输入模式，1-输出模式
-            - 'IO_state' (list[int]): 0-低，1-高
+            - 'IO_Mode' (List[int]): 0-输入模式，1-输出模式
+            - 'IO_state' (List[int]): 0-低，1-高
 
         """
         mode = (c_int * 2)()
@@ -2525,12 +2525,12 @@ class EffectorIOConfig:
         tag = rm_set_tool_voltage(self.handle, voltage_type)
         return tag
 
-    def rm_get_tool_voltage(self) -> tuple[int, int]:
+    def rm_get_tool_voltage(self) -> Tuple[int, int]:
         """
         获取工具端电源输出
 
         Returns:
-            tuple[int, int]: 函数执行的状态码。
+            Tuple[int, int]: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
@@ -2655,19 +2655,19 @@ class GripperControl:
         tag = rm_set_gripper_position(self.handle, position, block, timeout)
         return tag
 
-    def rm_get_gripper_state(self) -> tuple[int, dict[str, any]]:
+    def rm_get_gripper_state(self) -> Tuple[int, Dict[str, any]]:
         """
         查询夹爪状态
 
         Returns:
-            tuple[int,dict[str, any]]: 包含两个元素的元组
+            Tuple[int,Dict[str, any]]: 包含两个元素的元组
             -int 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - dict[str, any]: 夹爪状态信息字典，键为rm_gripper_state_t结构体的字段名称
+            - Dict[str, any]: 夹爪状态信息字典，键为rm_gripper_state_t结构体的字段名称
         """
         state = rm_gripper_state_t()
         tag = rm_get_gripper_state(self.handle, byref(state))
@@ -2690,19 +2690,19 @@ class Force:
     @image html oneforce.png "一维力坐标系"
     """
 
-    def rm_get_force_data(self) -> tuple[int, dict[str, any]]:
+    def rm_get_force_data(self) -> Tuple[int, Dict[str, any]]:
         """
         查询当前六维力传感器得到的力和力矩信息：Fx,Fy,Fz,Mx,My,Mz
 
         Returns:
-            tuple[int, dict[str,any]]: 包含两个元素的元组
+            Tuple[int, Dict[str,any]]: 包含两个元素的元组
             -int 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - dict[str, any]: 六维力数据字典，键为rm_force_data_t结构体的字段名称
+            - Dict[str, any]: 六维力数据字典，键为rm_force_data_t结构体的字段名称
         """
         data = rm_force_data_t()
         tag = rm_get_force_data(self.handle, byref(data))
@@ -2747,7 +2747,7 @@ class Force:
         tag = rm_set_force_sensor(self.handle, block)
         return tag
 
-    def rm_manual_set_force(self, point_num: int, joint: list[float], block: bool) -> int:
+    def rm_manual_set_force(self, point_num: int, joint: List[float], block: bool) -> int:
         """
         手动标定六维力数据
 
@@ -2757,7 +2757,7 @@ class Force:
 
         Args:
             point_num (int): 点位；1~4
-            joint (list[float]): 关节角度，单位：°
+            joint (List[float]): 关节角度，单位：°
             block (bool): true 表示阻塞模式，等待标定完成后返回；false 表示非阻塞模式，发送后立即返回
 
         Returns:
@@ -2791,19 +2791,19 @@ class Force:
         tag = rm_stop_set_force_sensor(self.handle)
         return tag
 
-    def rm_get_fz(self) -> tuple[int, dict[str, any]]:
+    def rm_get_fz(self) -> Tuple[int, Dict[str, any]]:
         """
         查询末端一维力数据
 
         Returns:
-            tuple[int, dict[str,any]]: 包含两个元素的元组
+            Tuple[int, Dict[str,any]]: 包含两个元素的元组
             -int 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - dict[str, any]: 一维力数据字典，键为rm_fz_data_t结构体的字段名称
+            - Dict[str, any]: 一维力数据字典，键为rm_fz_data_t结构体的字段名称
         """
         data = rm_fz_data_t()
         tag = rm_get_Fz(self.handle, byref(data))
@@ -2843,7 +2843,7 @@ class Force:
         tag = rm_auto_set_Fz(self.handle, block)
         return tag
 
-    def rm_manual_set_fz(self, joint1: list[float], joint2: list[float], block: bool) -> int:
+    def rm_manual_set_fz(self, joint1: List[float], joint2: List[float], block: bool) -> int:
         """
         手动标定一维力数据
         @details 设置一维力重心参数，一维力重新安装后，必须重新计算一维力所受到的初始力和重心。该手动标定流程，
@@ -2851,8 +2851,8 @@ class Force:
         机械臂开始自动沿用户设置的目标运动，并在此过程中计算一维力重心。
 
         Args:
-            joint1 (list[float]): 位置1关节角度数组，单位：度
-            joint2 (list[float]): 位置2关节角度数组，单位：度
+            joint1 (List[float]): 位置1关节角度数组，单位：度
+            joint2 (List[float]): 位置2关节角度数组，单位：度
             block (bool): true 表示阻塞模式，等待标定完成后返回；false 表示非阻塞模式，发送后立即返回
 
         Returns:
@@ -3071,7 +3071,7 @@ class DragTeach:
         tag = rm_stop_force_position(self.handle)
         return tag
 
-    def rm_save_trajectory(self, file_path: str) -> tuple[int, int]:
+    def rm_save_trajectory(self, file_path: str) -> Tuple[int, int]:
         """
         保存拖动示教轨迹
 
@@ -3079,7 +3079,7 @@ class DragTeach:
             file_path (str): 轨迹要保存的文件路径及名称，例: c:/rm_test.txt
 
         Returns:
-            tuple[int,int]: 包含两个元素的元组。
+            Tuple[int,int]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 数据发送失败，通信过程中出现问题。
@@ -3141,12 +3141,12 @@ class HandControl:
         tag = rm_set_hand_seq(self.handle, seq_num, block, timeout)
         return tag
 
-    def rm_set_hand_angle(self, hand_angle: list[int]) -> int:
+    def rm_set_hand_angle(self, hand_angle: List[int]) -> int:
         """
         设置灵巧手各自由度角度
         @details 设置灵巧手角度，灵巧手有6个自由度，从1~6分别为小拇指，无名指，中指，食指，大拇指弯曲，大拇指旋转
         Args:
-            hand_angle (list[int]): 手指角度数组，范围：0~1000. 另外，-1代表该自由度不执行任何操作，保持当前状态
+            hand_angle (List[int]): 手指角度数组，范围：0~1000. 另外，-1代表该自由度不执行任何操作，保持当前状态
 
         Returns:
             int: 函数执行的状态码。
@@ -3288,7 +3288,7 @@ class ModbusConfig:
         tag = rm_close_modbustcp_mode(self.handle)
         return tag
 
-    def rm_read_coils(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, int]:
+    def rm_read_coils(self, read_params: rm_peripheral_read_write_params_t) -> Tuple[int, int]:
         """
         读线圈
 
@@ -3296,7 +3296,7 @@ class ModbusConfig:
             read_params (rm_peripheral_read_write_params_t): 线圈读取参数结构体，该指令最多一次性支持读 8 个线圈数据，即返回的数据不会超过一个字节
 
         Returns:
-            tuple[int,int]: 包含两个元素的元组
+            Tuple[int,int]: 包含两个元素的元组
             -int 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -3309,7 +3309,7 @@ class ModbusConfig:
         tag = rm_read_coils(self.handle, read_params, byref(data))
         return tag, data.value
 
-    def rm_read_input_status(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, int]:
+    def rm_read_input_status(self, read_params: rm_peripheral_read_write_params_t) -> Tuple[int, int]:
         """
         读离散量输入
 
@@ -3317,7 +3317,7 @@ class ModbusConfig:
             read_params (rm_peripheral_read_write_params_t): 离散量输入读取参数结构体，该指令最多一次性支持读 8 个离散量数据，即返回的数据不会超过一个字节
 
         Returns:
-            tuple[int,int]: 包含两个元素的元组
+            Tuple[int,int]: 包含两个元素的元组
             -int 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -3330,7 +3330,7 @@ class ModbusConfig:
         tag = rm_read_input_status(self.handle, read_params, byref(data))
         return tag, data.value
 
-    def rm_read_holding_registers(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, int]:
+    def rm_read_holding_registers(self, read_params: rm_peripheral_read_write_params_t) -> Tuple[int, int]:
         """
         读保持寄存器
 
@@ -3338,7 +3338,7 @@ class ModbusConfig:
             read_params (rm_peripheral_read_write_params_t): 保持寄存器数据读取参数结构体，该指令每次只能读 1 个寄存器，即 2 个字节的数据，不可一次性读取多个寄存器数据，该结构体成员num无需设置
 
         Returns:
-            tuple[int,int]: 包含两个元素的元组
+            Tuple[int,int]: 包含两个元素的元组
             -int 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -3351,7 +3351,7 @@ class ModbusConfig:
         tag = rm_read_holding_registers(self.handle, read_params, byref(data))
         return tag, data.value
 
-    def rm_read_input_registers(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, int]:
+    def rm_read_input_registers(self, read_params: rm_peripheral_read_write_params_t) -> Tuple[int, int]:
         """
         读输入寄存器
 
@@ -3359,7 +3359,7 @@ class ModbusConfig:
             read_params (rm_peripheral_read_write_params_t): 输入寄存器数据读取参数结构体，该指令每次只能读 1 个寄存器，即 2 个字节的数据，不可一次性读取多个寄存器数据，该结构体成员num无需设置
 
         Returns:
-            tuple[int,int]: 包含两个元素的元组
+            Tuple[int,int]: 包含两个元素的元组
             -int 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -3410,13 +3410,13 @@ class ModbusConfig:
         tag = rm_write_single_register(self.handle, write_params, data)
         return tag
 
-    def rm_write_registers(self, write_params: rm_peripheral_read_write_params_t, data: list[int]) -> int:
+    def rm_write_registers(self, write_params: rm_peripheral_read_write_params_t, data: List[int]) -> int:
         """
         写多个寄存器
 
         Args:
             write_params (rm_peripheral_read_write_params_t): 多个寄存器数据写入参数结构体。其中寄存器每次写的数量不超过10个，即该结构体成员num<=10。
-            data (list[int]): 要写入寄存器的数据数组，类型：byte。
+            data (List[int]): 要写入寄存器的数据数组，类型：byte。
 
         Returns:
             int: 函数执行的状态码。
@@ -3431,13 +3431,13 @@ class ModbusConfig:
         tag = rm_write_registers(self.handle, write_params, datas)
         return tag
 
-    def rm_write_coils(self, write_params: rm_peripheral_read_write_params_t, data: list[int]) -> int:
+    def rm_write_coils(self, write_params: rm_peripheral_read_write_params_t, data: List[int]) -> int:
         """
         写多圈数据
 
         Args:
             write_params (rm_peripheral_read_write_params_t): 多圈数据写入参数结构体。每次写的数量不超过 160 个，即该结构体成员num<=160。
-            data (list[int]): 要写入线圈的数据数组，类型：byte。
+            data (List[int]): 要写入线圈的数据数组，类型：byte。
 
         Returns:
             int: 函数执行的状态码。
@@ -3452,7 +3452,7 @@ class ModbusConfig:
         tag = rm_write_coils(self.handle, write_params, datas)
         return tag
 
-    def rm_read_multiple_coils(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, list[int]]:
+    def rm_read_multiple_coils(self, read_params: rm_peripheral_read_write_params_t) -> Tuple[int, List[int]]:
         """
         读多圈数据
 
@@ -3460,21 +3460,21 @@ class ModbusConfig:
             read_params (rm_peripheral_read_write_params_t): 多圈数据读取参数结构体，要读的线圈的数量 8< num <= 120，该指令最多一次性支持读 120 个线圈数据， 即 15 个 byte
 
         Returns:
-            tuple[int,list[int]]: 包含两个元素的元组
+            Tuple[int,List[int]]: 包含两个元素的元组
             -int 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - list[int]: 返回线圈状态列表，数据类型：int8
+            - List[int]: 返回线圈状态列表，数据类型：int8
         """
         data_num = int(read_params.num//8+1)
         data = (c_int * data_num)()
         tag = rm_read_multiple_coils(self.handle, read_params, data)
         return tag, list(data)
 
-    def rm_read_multiple_holding_registers(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, list[int]]:
+    def rm_read_multiple_holding_registers(self, read_params: rm_peripheral_read_write_params_t) -> Tuple[int, List[int]]:
         """
         读多个保存寄存器
 
@@ -3482,14 +3482,14 @@ class ModbusConfig:
             read_params (rm_peripheral_read_write_params_t): 多个保存寄存器读取参数结构体，要读的寄存器的数量 2 < num < 13，该指令最多一次性支持读 12 个寄存器数据， 即 24 个 byte
 
         Returns:
-            tuple[int,list[int]]: 包含两个元素的元组
+            Tuple[int,List[int]]: 包含两个元素的元组
             -int 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - list[int]: 返回寄存器数据列表，数据类型：int8
+            - List[int]: 返回寄存器数据列表，数据类型：int8
         """
         data_num = int(read_params.num * 2)
         data = (c_int * data_num)()
@@ -3497,7 +3497,7 @@ class ModbusConfig:
             self.handle, read_params, data)
         return tag, list(data)
 
-    def rm_read_multiple_input_registers(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, list[int]]:
+    def rm_read_multiple_input_registers(self, read_params: rm_peripheral_read_write_params_t) -> Tuple[int, List[int]]:
         """
         读多个输入寄存器
 
@@ -3505,14 +3505,14 @@ class ModbusConfig:
             read_params (rm_peripheral_read_write_params_t): 多个输入寄存器读取参数结构体。要读的寄存器的数量 2 < num < 13，该指令最多一次性支持读 12 个寄存器数据， 即 24 个 byte
 
         Returns:
-            tuple[int,list[int]]: 包含两个元素的元组
+            Tuple[int,List[int]]: 包含两个元素的元组
             -int 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - list[int]: 返回寄存器数据列表，数据类型：int8
+            - List[int]: 返回寄存器数据列表，数据类型：int8
         """
         data_num = int(read_params.num * 2)
         data = (c_int * data_num)()
@@ -3547,12 +3547,12 @@ class InstallPos:
         tag = rm_set_install_pose(self.handle, x, y, z)
         return tag
 
-    def rm_get_install_pose(self) -> dict[str, any]:
+    def rm_get_install_pose(self) -> Dict[str, any]:
         """
         获取安装方式参数
 
         Returns:
-            dict[str,any]: 包含以下键值的字典:
+            Dict[str,any]: 包含以下键值的字典:
             - 'return_code' (int): 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -3579,20 +3579,20 @@ class InstallPos:
 
         return result_dict
 
-    def rm_get_joint_software_version(self) -> tuple[int, list[int]]:
+    def rm_get_joint_software_version(self) -> Tuple[int, List[int]]:
         """
         查询关节软件版本号
 
         @attention 获取到的关节软件版本号需转换为十六进制，例如获取某关节版本为54536，转换为十六进制为D508，则当前关节的版本号为 Vd5.0.8
         Returns:
-            tuple[int,list[int]]: 包含两个元素的元组
+            Tuple[int,List[int]]: 包含两个元素的元组
             -int 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - list[int]: 获取到的各关节软件版本号数组
+            - List[int]: 获取到的各关节软件版本号数组
         """
 
         if self.arm_dof != 0:
@@ -3603,12 +3603,12 @@ class InstallPos:
         ret = rm_get_joint_software_version(self.handle, version)
         return ret, list(version)
 
-    def rm_get_tool_software_version(self) -> tuple[int, int]:
+    def rm_get_tool_software_version(self) -> Tuple[int, int]:
         """
         查询末端接口板软件版本号
         @attention 获取到的末端接口板软件版本号需转换为十六进制，例如获取到版本号393，转换为十六进制为189，则当前关节的版本号为 V1.8.9
         Returns:
-            tuple[int,int]: 包含两个元素的元组
+            Tuple[int,int]: 包含两个元素的元组
             -int 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -3658,12 +3658,12 @@ class ForcePositionControl:
         tag = rm_stop_force_position_move(self.handle)
         return tag
 
-    def rm_force_position_move_joint(self, joint: list[float], sensor: int, mode: int, dir: int, force: float, follow: bool) -> int:
+    def rm_force_position_move_joint(self, joint: List[float], sensor: int, mode: int, dir: int, force: float, follow: bool) -> int:
         """
         透传力位混合补偿-角度方式
 
         Args:
-            joint (list[float]): 目标关节角度，单位：°
+            joint (List[float]): 目标关节角度，单位：°
             sensor (int): 所使用传感器类型，0-一维力，1-六维力
             mode (int): 模式，0-沿基坐标系，1-沿工具端坐标系
             dir (int): 力控方向，0~5分别代表X/Y/Z/Rx/Ry/Rz，其中一维力类型时默认方向为Z方向
@@ -3686,12 +3686,12 @@ class ForcePositionControl:
             self.handle, joint, sensor, mode, dir, force, follow)
         return tag
 
-    def rm_force_position_move_pose(self, pose: list[float], sensor: int, mode: int, dir: int, force: float, follow: bool) -> int:
+    def rm_force_position_move_pose(self, pose: List[float], sensor: int, mode: int, dir: int, force: float, follow: bool) -> int:
         """
         透传力位混合补偿-位姿方式
 
         Args:
-            pose (list[float]): 当前坐标系下目标位姿列表，支持欧拉角及四元数方式表示姿态，若列表长度为6，则认为使用欧拉角方式表示；列表长度为7则认为使用四元数表示
+            pose (List[float]): 当前坐标系下目标位姿列表，支持欧拉角及四元数方式表示姿态，若列表长度为6，则认为使用欧拉角方式表示；列表长度为7则认为使用四元数表示
             sensor (int): 所使用传感器类型，0-一维力，1-六维力
             mode (int): 模式，0-沿基坐标系，1-沿工具端坐标系
             dir (int): 力控方向，0~5分别代表X/Y/Z/Rx/Ry/Rz，其中一维力类型时默认方向为Z方向
@@ -3773,19 +3773,19 @@ class LiftControl:
         tag = rm_set_lift_height(self.handle, speed, height, block)
         return tag
 
-    def rm_get_lift_state(self) -> tuple[int, dict[str, any]]:
+    def rm_get_lift_state(self) -> Tuple[int, Dict[str, any]]:
         """
         获取升降机构状态
 
         Returns:
-            tuple[int,dict[str,any]]: 包含两个元素的元组
+            Tuple[int,Dict[str,any]]: 包含两个元素的元组
             -int 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - dict[str,any]: 获取到的升降机构状态字典，键为rm_expand_state_t结构体的字段名称
+            - Dict[str,any]: 获取到的升降机构状态字典，键为rm_expand_state_t结构体的字段名称
         """
         data = rm_expand_state_t()
         tag = rm_get_lift_state(self.handle, byref(data))
@@ -3840,19 +3840,19 @@ class ExpandControl:
         tag = rm_set_expand_pos(self.handle, speed, height, block)
         return tag
 
-    def rm_get_expand_state(self) -> tuple[int, dict[str, any]]:
+    def rm_get_expand_state(self) -> Tuple[int, Dict[str, any]]:
         """
         获取扩展关节状态
 
         Returns:
-            tuple[int,dict[str,any]]: 包含两个元素的元组
+            Tuple[int,Dict[str,any]]: 包含两个元素的元组
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-            - dict[str,any]: 获取到的扩展关节状态字典，键为rm_expand_state_t结构体的字段名称
+            - Dict[str,any]: 获取到的扩展关节状态字典，键为rm_expand_state_t结构体的字段名称
         """
         data = rm_expand_state_t()
         tag = rm_get_expand_state(self.handle, byref(data))
@@ -3864,7 +3864,7 @@ class ProjectManagement:
     在线编程文件下发、管理
     """
 
-    def rm_send_project(self, send_project: rm_send_project_t) -> tuple[int, int]:
+    def rm_send_project(self, send_project: rm_send_project_t) -> Tuple[int, int]:
         """
         文件下发。
 
@@ -3888,7 +3888,7 @@ class ProjectManagement:
         tag = rm_send_project(self.handle, send_project, byref(err_line))
         return tag, err_line.value if tag != 0 else -1
 
-    def rm_get_program_trajectory_list(self, page_num: int, page_size: int, vague_search: str) -> tuple[int, dict[str, any]]:
+    def rm_get_program_trajectory_list(self, page_num: int, page_size: int, vague_search: str) -> Tuple[int, Dict[str, any]]:
         """
         获取在线编程列表
 
@@ -3898,14 +3898,14 @@ class ProjectManagement:
             vague_search (str): 模糊搜索
 
         Returns:
-            tuple[int, dict[str,any]]: 包含两个元素的元组。
+            Tuple[int, Dict[str,any]]: 包含两个元素的元组。
                 -int 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                     - -1: 数据发送失败，通信过程中出现问题。
                     - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                     - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-                -dict[str,any] 获取到的在线编程列表字典，键为rm_program_trajectorys_t结构体的字段名称
+                -Dict[str,any] 获取到的在线编程列表字典，键为rm_program_trajectorys_t结构体的字段名称
         """
         trajectorys = rm_program_trajectorys_t()
         ret = rm_get_program_trajectory_list(
@@ -3939,19 +3939,19 @@ class ProjectManagement:
         tag = rm_set_program_id_run(self.handle, tra_id, speed, timeout)
         return tag
 
-    def rm_get_program_run_state(self) -> tuple[int, dict[str, any]]:
+    def rm_get_program_run_state(self) -> Tuple[int, Dict[str, any]]:
         """
         查询在线编程运行状态
 
         Returns:
-            tuple[int, dict[str,any]]: 包含两个元素的元组。
+            Tuple[int, Dict[str,any]]: 包含两个元素的元组。
                 -int 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                     - -1: 数据发送失败，通信过程中出现问题。
                     - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                     - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-                -dict[str,any] 获取到的在线编程运行状态字典，键为rm_program_run_state_t结构体的字段名称
+                -Dict[str,any] 获取到的在线编程运行状态字典，键为rm_program_run_state_t结构体的字段名称
         """
         run_state = rm_program_run_state_t()
         ret = rm_get_program_run_state(self.handle, byref(run_state))
@@ -4013,12 +4013,12 @@ class ProjectManagement:
         tag = rm_set_default_run_program(self.handle, tra_id)
         return tag
 
-    def rm_get_default_run_program(self) -> tuple[int, int]:
+    def rm_get_default_run_program(self) -> Tuple[int, int]:
         """
         获取 IO 默认运行编号
 
         Returns:
-            tuple[int,int]: 包含两个元素的元组。
+            Tuple[int,int]: 包含两个元素的元组。
                 -int 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -4091,7 +4091,7 @@ class GlobalWaypointManage:
         tag = rm_delete_global_waypoint(self.handle, point_name)
         return tag
 
-    def rm_get_given_global_waypoint(self, point_name: str) -> tuple[int, dict[str, any]]:
+    def rm_get_given_global_waypoint(self, point_name: str) -> Tuple[int, Dict[str, any]]:
         """
         查询指定全局路点
 
@@ -4099,21 +4099,21 @@ class GlobalWaypointManage:
             point_name (str): 指定全局路点名称
 
         Returns:
-            tuple[int,dict[str,any]]: 包含两个元素的元组。
+            Tuple[int,Dict[str,any]]: 包含两个元素的元组。
                 -int 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                     - -1: 数据发送失败，通信过程中出现问题。
                     - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                     - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-                -dict[str,any] 返回指定全局路点的参数字典，键为rm_waypoint_t结构体的字段名称
+                -Dict[str,any] 返回指定全局路点的参数字典，键为rm_waypoint_t结构体的字段名称
         """
         waypoint = rm_waypoint_t()
         tag = rm_get_given_global_waypoint(
             self.handle, point_name, byref(waypoint))
         return tag, waypoint.to_dict()
 
-    def rm_get_global_waypoints_list(self, page_num: int, page_size: int, vague_search: str) -> tuple[int, dict[str, any]]:
+    def rm_get_global_waypoints_list(self, page_num: int, page_size: int, vague_search: str) -> Tuple[int, Dict[str, any]]:
         """
         查询多个全局路点
 
@@ -4123,14 +4123,14 @@ class GlobalWaypointManage:
             vague_search (str): 模糊搜索
 
         Returns:
-            tuple[int,dict[str,any]]: 包含两个元素的元组。
+            Tuple[int,Dict[str,any]]: 包含两个元素的元组。
                 -int 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                     - -1: 数据发送失败，通信过程中出现问题。
                     - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                     - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-                -dict[str,any] 返回符合条件的全局路点列表字典，键为rm_waypoint_list_t结构体的字段名称
+                -Dict[str,any] 返回符合条件的全局路点列表字典，键为rm_waypoint_list_t结构体的字段名称
         """
         waypoint_list = rm_waypoint_list_t()
         ret = rm_get_global_waypoints_list(
@@ -4212,19 +4212,19 @@ class ElectronicFenceConfig:
         tag = rm_delete_electronic_fence_config(self.handle, name)
         return tag
 
-    def rm_get_electronic_fence_list_names(self) -> dict[str, any]:
+    def rm_get_electronic_fence_list_names(self) -> Dict[str, any]:
         """
         查询所有几何模型名称
 
         Returns:
-            dict[str,any]: 包含以下键值的字典:
+            Dict[str,any]: 包含以下键值的字典:
             - 'return_code' (int): 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，接收到的数据格式不正确或不完整。
-            - 'job_names' (list[str]): 字符串列表，表示所有几何模型名称。
+            - 'job_names' (List[str]): 字符串列表，表示所有几何模型名称。
             - 'len' (int): 几何模型名称列表长度
         """
         max_len = 10
@@ -4242,7 +4242,7 @@ class ElectronicFenceConfig:
 
         return result_dict
 
-    def rm_get_given_electronic_fence_config(self, name: str) -> tuple[int, dict[str, any]]:
+    def rm_get_given_electronic_fence_config(self, name: str) -> Tuple[int, Dict[str, any]]:
         """
         查询指定几何模型参数
 
@@ -4250,21 +4250,21 @@ class ElectronicFenceConfig:
             name (str): 指定几何模型名称
 
         Returns:
-            tuple[int,dict[str,any]]: 包含两个元素的元组。
+            Tuple[int,Dict[str,any]]: 包含两个元素的元组。
                 -int 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                     - -1: 数据发送失败，通信过程中出现问题。
                     - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                     - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-                -dict[str,any] 返回指定几何模型的参数字典，键为rm_fence_config_t结构体的字段名称
+                -Dict[str,any] 返回指定几何模型的参数字典，键为rm_fence_config_t结构体的字段名称
         """
         config = rm_fence_config_t()
         ret = rm_get_given_electronic_fence_config(
             self.handle, name, byref(config))
         return ret, config.to_dict()
 
-    def rm_get_electronic_fence_list_infos(self) -> dict[str, any]:
+    def rm_get_electronic_fence_list_infos(self) -> Dict[str, any]:
         """
         查询所有几何模型参数
 
@@ -4276,7 +4276,7 @@ class ElectronicFenceConfig:
                 - -1: 数据发送失败，通信过程中出现问题。
                 - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                 - -3: 返回值解析失败，接收到的数据格式不正确或不完整。
-            - 'electronic_fence_list' (list[dict]): 几何模型参数列表,。
+            - 'electronic_fence_list' (List[dict]): 几何模型参数列表,。
             - 'len' (int): 几何模型列表长度
         """
         infos = rm_fence_config_list_t()
@@ -4310,19 +4310,19 @@ class ElectronicFenceConfig:
             self.handle, electronic_fence_enable)
         return tag
 
-    def rm_get_electronic_fence_enable(self) -> tuple[int, dict[str, any]]:
+    def rm_get_electronic_fence_enable(self) -> Tuple[int, Dict[str, any]]:
         """
         获取电子围栏使能状态
 
         Returns:
-            tuple[int,dict[str,any]]: 包含两个元素的元组。
+            Tuple[int,Dict[str,any]]: 包含两个元素的元组。
                 -int 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                     - -1: 数据发送失败，通信过程中出现问题。
                     - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                     - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-                -dict[str,any] 返回电子围栏使能状态字典，键为rm_electronic_fence_enable_t结构体的字段名称
+                -Dict[str,any] 返回电子围栏使能状态字典，键为rm_electronic_fence_enable_t结构体的字段名称
         """
         enable = rm_electronic_fence_enable_t()
         ret = rm_get_electronic_fence_enable(self.handle, byref(enable))
@@ -4346,19 +4346,19 @@ class ElectronicFenceConfig:
         tag = rm_set_electronic_fence_config(self.handle, electronic_fence)
         return tag
 
-    def rm_get_electronic_fence_config(self) -> tuple[int, dict[str, any]]:
+    def rm_get_electronic_fence_config(self) -> Tuple[int, Dict[str, any]]:
         """
         获取当前电子围栏参数
 
         Returns:
-            tuple[int,dict[str,any]]: 包含两个元素的元组。
+            Tuple[int,Dict[str,any]]: 包含两个元素的元组。
                 -int 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                     - -1: 数据发送失败，通信过程中出现问题。
                     - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                     - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-                -dict[str,any] 返回当前电子围栏参数字典，键为rm_fence_config_t结构体的字段名称（不返回电子围栏名称）
+                -Dict[str,any] 返回当前电子围栏参数字典，键为rm_fence_config_t结构体的字段名称（不返回电子围栏名称）
         """
         config = rm_fence_config_t()
         ret = rm_get_electronic_fence_config(self.handle, byref(config))
@@ -4382,19 +4382,19 @@ class ElectronicFenceConfig:
         tag = rm_set_virtual_wall_enable(self.handle, virtual_wall_enable)
         return tag
 
-    def rm_get_virtual_wall_enable(self) -> tuple[int, dict[str, any]]:
+    def rm_get_virtual_wall_enable(self) -> Tuple[int, Dict[str, any]]:
         """
         获取虚拟墙使能状态
 
         Returns:
-            tuple[int,dict[str,any]]: 包含两个元素的元组。
+            Tuple[int,Dict[str,any]]: 包含两个元素的元组。
                 -int 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                     - -1: 数据发送失败，通信过程中出现问题。
                     - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                     - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-                -dict[str,any] 返回虚拟墙使能状态字典，键为rm_electronic_fence_enable_t结构体的字段名称
+                -Dict[str,any] 返回虚拟墙使能状态字典，键为rm_electronic_fence_enable_t结构体的字段名称
         """
         enable = rm_electronic_fence_enable_t()
         ret = rm_get_virtual_wall_enable(self.handle, byref(enable))
@@ -4418,19 +4418,19 @@ class ElectronicFenceConfig:
         tag = rm_set_virtual_wall_config(self.handle, virtual_wall)
         return tag
 
-    def rm_get_virtual_wall_config(self) -> tuple[int, dict[str, any]]:
+    def rm_get_virtual_wall_config(self) -> Tuple[int, Dict[str, any]]:
         """
         获取当前虚拟墙参数
 
         Returns:
-            tuple[int,dict[str,any]]: 包含两个元素的元组。
+            Tuple[int,Dict[str,any]]: 包含两个元素的元组。
                 -int 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                     - -1: 数据发送失败，通信过程中出现问题。
                     - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                     - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-                -dict[str,any] 返回当前虚拟墙参数字典，键为rm_fence_config_t结构体的字段名称（不返回虚拟墙名称）
+                -Dict[str,any] 返回当前虚拟墙参数字典，键为rm_fence_config_t结构体的字段名称（不返回虚拟墙名称）
         """
         config = rm_fence_config_t()
         ret = rm_get_virtual_wall_config(self.handle, byref(config))
@@ -4462,12 +4462,12 @@ class SelfCollision:
         tag = rm_set_self_collision_enable(self.handle, enable)
         return tag
 
-    def rm_get_self_collision_enable(self) -> tuple[int, bool]:
+    def rm_get_self_collision_enable(self) -> Tuple[int, bool]:
         """
         获取自碰撞安全检测使能状态
 
         Returns:
-            tuple[int,bool]: 包含两个元素的元组。
+            Tuple[int,bool]: 包含两个元素的元组。
                 -int 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -4507,19 +4507,19 @@ class UdpConfig:
         tag = rm_set_realtime_push(self.handle, config)
         return tag
 
-    def rm_get_realtime_push(self) -> tuple[int, dict[str, any]]:
+    def rm_get_realtime_push(self) -> Tuple[int, Dict[str, any]]:
         """
         查询 UDP 机械臂状态主动上报配置
 
         Returns:
-            tuple[int,dict[str,any]]: 包含两个元素的元组。
+            Tuple[int,Dict[str,any]]: 包含两个元素的元组。
                 -int 函数执行的状态码。
                     - 0: 成功。
                     - 1: 控制器返回false，参数错误或机械臂状态发生错误。
                     - -1: 数据发送失败，通信过程中出现问题。
                     - -2: 数据接收失败，通信过程中出现问题或者控制器长久没有返回。
                     - -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。
-                -dict[str,any] 返回 UDP 机械臂状态主动上报配置字典，键为rm_realtime_push_config_t结构体的字段名称
+                -Dict[str,any] 返回 UDP 机械臂状态主动上报配置字典，键为rm_realtime_push_config_t结构体的字段名称
         """
         config = rm_realtime_push_config_t()
         tag = rm_get_realtime_push(self.handle, byref(config))
@@ -4574,11 +4574,11 @@ class Algo:
         """
         rm_algo_set_angle(x, y, z)
 
-    def rm_algo_get_angle(self) -> tuple[float, float, float]:
+    def rm_algo_get_angle(self) -> Tuple[float, float, float]:
         """获取安装角度
 
         Returns:
-            tuple[float,float,float]: 包含三个浮点数的元组，分别代表x、y和z轴的安装角度，单位：°
+            Tuple[float,float,float]: 包含三个浮点数的元组，分别代表x、y和z轴的安装角度，单位：°
         """
         x = c_float()
         y = c_float()
@@ -4596,12 +4596,12 @@ class Algo:
         """
         rm_algo_set_workframe(frame)
 
-    def rm_algo_get_curr_workframe(self) -> dict[str, any]:
+    def rm_algo_get_curr_workframe(self) -> Dict[str, any]:
         """
         获取当前工作坐标系
 
         Returns:
-            dict[str, any]: 返回当前工作坐标系字典，键为rm_frame_t结构体的字段名称
+            Dict[str, any]: 返回当前工作坐标系字典，键为rm_frame_t结构体的字段名称
         """
         frame = rm_frame_t()
         rm_algo_get_curr_workframe(byref(frame))
@@ -4617,23 +4617,23 @@ class Algo:
 
         rm_algo_set_toolframe(frame)
 
-    def rm_algo_get_curr_toolframe(self) -> dict[str, any]:
+    def rm_algo_get_curr_toolframe(self) -> Dict[str, any]:
         """
         获取算法当前工具坐标系
 
         Returns:
-            dict[str, any]: 返回当前工具坐标系字典，键为rm_frame_t结构体的字段名称
+            Dict[str, any]: 返回当前工具坐标系字典，键为rm_frame_t结构体的字段名称
         """
         frame = rm_frame_t()
         rm_algo_get_curr_toolframe(byref(frame))
         return frame.to_dictionary()
 
-    def rm_algo_set_joint_max_limit(self, joint_limit: list[float]) -> None:
+    def rm_algo_set_joint_max_limit(self, joint_limit: List[float]) -> None:
         """
         设置算法关节最大限位
 
         Args:
-            joint_limit (list[float]): 关节最大限位数组，单位：°
+            joint_limit (List[float]): 关节最大限位数组，单位：°
         """
         if self.arm_dof != 0:
             joint_positions = (c_float * self.arm_dof)(*joint_limit)
@@ -4641,12 +4641,12 @@ class Algo:
             joint_positions = (c_float * ARM_DOF)(*joint_limit)
         rm_algo_set_joint_max_limit(joint_positions)
 
-    def rm_algo_get_joint_max_limit(self) -> list[float]:
+    def rm_algo_get_joint_max_limit(self) -> List[float]:
         """
         获取算法关节最大限位
 
         Returns:
-            list[float]: 关节最大限位数组，单位：°
+            List[float]: 关节最大限位数组，单位：°
         """
         if self.arm_dof != 0:
             joint_positions = (c_float * self.arm_dof)()
@@ -4655,12 +4655,12 @@ class Algo:
         rm_algo_get_joint_max_limit(joint_positions)
         return list(joint_positions)
 
-    def rm_algo_set_joint_min_limit(self, joint_limit: list[float]) -> None:
+    def rm_algo_set_joint_min_limit(self, joint_limit: List[float]) -> None:
         """
         设置算法关节最小限位
 
         Args:
-            joint_limit (list[float]): 关节最小限位数组，单位：°
+            joint_limit (List[float]): 关节最小限位数组，单位：°
         """
         if self.arm_dof != 0:
             joint_positions = (c_float * self.arm_dof)(*joint_limit)
@@ -4668,12 +4668,12 @@ class Algo:
             joint_positions = (c_float * ARM_DOF)(*joint_limit)
         rm_algo_set_joint_min_limit(joint_positions)
 
-    def rm_algo_get_joint_min_limit(self) -> list[float]:
+    def rm_algo_get_joint_min_limit(self) -> List[float]:
         """
         获取算法关节最小限位
 
         Returns:
-            list[float]: 关节最小限位数组，单位：°
+            List[float]: 关节最小限位数组，单位：°
         """
         if self.arm_dof != 0:
             joint_positions = (c_float * self.arm_dof)()
@@ -4682,12 +4682,12 @@ class Algo:
         rm_algo_get_joint_min_limit(joint_positions)
         return list(joint_positions)
 
-    def rm_algo_set_joint_max_speed(self, joint_limit: list[float]) -> None:
+    def rm_algo_set_joint_max_speed(self, joint_limit: List[float]) -> None:
         """
         设置算法关节最大速度
 
         Args:
-            joint_limit (list[float]): 关节最大速度，单位：RPM
+            joint_limit (List[float]): 关节最大速度，单位：RPM
         """
         if self.arm_dof != 0:
             speed = (c_float * self.arm_dof)(*joint_limit)
@@ -4695,12 +4695,12 @@ class Algo:
             speed = (c_float * ARM_DOF)(*joint_limit)
         rm_algo_set_joint_max_speed(speed)
 
-    def rm_algo_get_joint_max_speed(self) -> list[float]:
+    def rm_algo_get_joint_max_speed(self) -> List[float]:
         """
         获取算法关节最大速度
 
         Returns:
-            list[float]: 关节最大速度，单位：RPM
+            List[float]: 关节最大速度，单位：RPM
         """
         if self.arm_dof != 0:
             speed = (c_float * self.arm_dof)()
@@ -4709,12 +4709,12 @@ class Algo:
         rm_algo_get_joint_max_speed(speed)
         return list(speed)
 
-    def rm_algo_set_joint_max_acc(self, joint_limit: list[float]) -> None:
+    def rm_algo_set_joint_max_acc(self, joint_limit: List[float]) -> None:
         """
         设置算法关节最大加速度
 
         Args:
-            joint_limit (list[float]): 关节最大加速度，单位：RPM/s
+            joint_limit (List[float]): 关节最大加速度，单位：RPM/s
         """
         if self.arm_dof != 0:
             acc = (c_float * self.arm_dof)(*joint_limit)
@@ -4722,12 +4722,12 @@ class Algo:
             acc = (c_float * ARM_DOF)(*joint_limit)
         rm_algo_set_joint_max_acc(acc)
 
-    def rm_algo_get_joint_max_acc(self) -> list[float]:
+    def rm_algo_get_joint_max_acc(self) -> List[float]:
         """
         获取算法关节最大加速度
 
         Returns:
-            list[float]: 关节最大加速度，单位：RPM/s
+            List[float]: 关节最大加速度，单位：RPM/s
         """
         if self.arm_dof != 0:
             acc = (c_float * self.arm_dof)()
@@ -4736,7 +4736,7 @@ class Algo:
         rm_algo_get_joint_max_acc(acc)
         return list(acc)
 
-    def rm_algo_inverse_kinematics(self, params: rm_inverse_kinematics_params_t) -> tuple[int, list[float]]:
+    def rm_algo_inverse_kinematics(self, params: rm_inverse_kinematics_params_t) -> Tuple[int, List[float]]:
         """
         逆解函数
 
@@ -4744,13 +4744,13 @@ class Algo:
             params (rm_inverse_kinematics_params_t): 逆解输入参数结构体
 
         Returns:
-            tuple[int,list[float]]: 包含两个元素的元组。
+            Tuple[int,List[float]]: 包含两个元素的元组。
                 -int 逆解结果
                     - 0: 逆解成功
                     - 1: 逆解失败
                     - -1: 上一时刻关节角度输入为空
                     - -2: 目标位姿四元数不合法
-                -list[float] 输出的关节角度 单位°，长度为机械臂自由度
+                -List[float] 输出的关节角度 单位°，长度为机械臂自由度
         """
         q_out = (c_float * ARM_DOF)()
 
@@ -4758,18 +4758,18 @@ class Algo:
         out = list(q_out)
         return ret, out[:self.arm_dof]
 
-    def rm_algo_forward_kinematics(self, joint: list[float], flag: int = 1) -> list[float]:
+    def rm_algo_forward_kinematics(self, joint: List[float], flag: int = 1) -> List[float]:
         """
         正解算法接口
 
         Args:
-            joint (list[float]): 关节角度，单位：°
+            joint (List[float]): 关节角度，单位：°
             flag (int, optional): 选择姿态表示方式，默认欧拉角表示姿态
                 - 0: 返回使用四元数表示姿态的位姿列表[x,y,z,w,x,y,z]
                 - 1: 返回使用欧拉角表示姿态的位姿列表[x,y,z,rx,ry,rz]
 
         Returns:
-            list[float]: 解得目标位姿列表
+            List[float]: 解得目标位姿列表
         """
         if self.arm_dof != 0:
             joint = (c_float * self.arm_dof)(*joint)
@@ -4787,40 +4787,40 @@ class Algo:
         # 保留三位小数
         # return [round(value, 3) for value in pose_eul] if flag else [round(value, 3) for value in pose_qua]
 
-    def rm_algo_euler2quaternion(self, eul: list[float]) -> list[float]:
+    def rm_algo_euler2quaternion(self, eul: List[float]) -> List[float]:
         """
         欧拉角转四元数
 
         Args:
-            eul (list[float]): 欧拉角列表[rx.ry,rz]，单位：rad
+            eul (List[float]): 欧拉角列表[rx.ry,rz]，单位：rad
 
         Returns:
-            list[float]: 四元数列表[w,x,y,z]
+            List[float]: 四元数列表[w,x,y,z]
         """
         eul = rm_euler_t(*eul)
         quat = rm_algo_euler2quaternion(eul)
         return [quat.w, quat.x, quat.y, quat.z]
 
-    def rm_algo_quaternion2euler(self, quat: list[float]) -> list[float]:
+    def rm_algo_quaternion2euler(self, quat: List[float]) -> List[float]:
         """
         四元数转欧拉角
 
         Args:
-            quat (list[float]): 四元数列表[w,x,y,z]
+            quat (List[float]): 四元数列表[w,x,y,z]
 
         Returns:
-            list[float]: 欧拉角列表[rx.ry,rz]，单位：rad
+            List[float]: 欧拉角列表[rx.ry,rz]，单位：rad
         """
         quat = rm_quat_t(*quat)
         eul = rm_algo_quaternion2euler(quat)
         return [eul.rx, eul.ry, eul.rz]
 
-    def rm_algo_euler2matrix(self, eu: list[float]) -> rm_matrix_t:
+    def rm_algo_euler2matrix(self, eu: List[float]) -> rm_matrix_t:
         """
         欧拉角转旋转矩阵
 
         Args:
-            eu (list[float]): 欧拉角列表[rx.ry,rz]，单位：rad
+            eu (List[float]): 欧拉角列表[rx.ry,rz]，单位：rad
 
         Returns:
             rm_matrix_t: 旋转矩阵
@@ -4829,12 +4829,12 @@ class Algo:
         matrix = rm_algo_euler2matrix(eu)
         return matrix
 
-    def rm_algo_pos2matrix(self, pose: list[float]) -> rm_matrix_t:
+    def rm_algo_pos2matrix(self, pose: List[float]) -> rm_matrix_t:
         """
         位姿转旋转矩阵
 
         Args:
-            pose (list[float]): 位置姿态列表[x,y,z,rx,ry,rz]
+            pose (List[float]): 位置姿态列表[x,y,z,rx,ry,rz]
 
         Returns:
             rm_matrix_t: 旋转矩阵
@@ -4845,7 +4845,7 @@ class Algo:
         matrix = rm_algo_pos2matrix(po1)
         return matrix
 
-    def rm_algo_matrix2pos(self, matrix: rm_matrix_t, flag: int = 1) -> list[float]:
+    def rm_algo_matrix2pos(self, matrix: rm_matrix_t, flag: int = 1) -> List[float]:
         """
         旋转矩阵转位姿
 
@@ -4856,7 +4856,7 @@ class Algo:
                 - 1: 返回使用欧拉角表示姿态的位姿列表[x,y,z,rx,ry,rz]
 
         Returns:
-            list[float]: 解得目标位姿
+            List[float]: 解得目标位姿
         """
         pose = rm_algo_matrix2pos(matrix)
         position = pose.position
@@ -4869,7 +4869,7 @@ class Algo:
         return pose_eul if flag else pose_qua
         # return pose.to_dict()
 
-    def rm_algo_base2workframe(self, matrix: rm_matrix_t, pose_in_base: rm_pose_t, flag: int = 1) -> list[float]:
+    def rm_algo_base2workframe(self, matrix: rm_matrix_t, pose_in_base: rm_pose_t, flag: int = 1) -> List[float]:
         """
         基坐标系转工作坐标系
 
@@ -4881,7 +4881,7 @@ class Algo:
                 - 1: 返回使用欧拉角表示姿态的位姿列表[x,y,z,rx,ry,rz]
 
         Returns:
-            list[float]: 基坐标系在工作坐标系下的位姿
+            List[float]: 基坐标系在工作坐标系下的位姿
         """
         pose_in_work = rm_algo_matrix2pos(matrix, pose_in_base)
         position = pose_in_work.position
@@ -4894,7 +4894,7 @@ class Algo:
         return pose_eul if flag else pose_qua
         # return pose_in_work.to_dict()
 
-    def rm_algo_workframe2base(self, matrix: rm_matrix_t, pose_in_work: rm_pose_t, flag: int = 1) -> list[float]:
+    def rm_algo_workframe2base(self, matrix: rm_matrix_t, pose_in_work: rm_pose_t, flag: int = 1) -> List[float]:
         """
         工作坐标系转基坐标系
 
@@ -4906,7 +4906,7 @@ class Algo:
                 - 1: 返回使用欧拉角表示姿态的位姿列表[x,y,z,rx,ry,rz]
 
         Returns:
-            list[float]: 工作坐标系在基坐标系下的位姿
+            List[float]: 工作坐标系在基坐标系下的位姿
         """
         pose_in_base = rm_algo_workframe2base(matrix, pose_in_work)
         position = pose_in_base.position
@@ -4919,7 +4919,7 @@ class Algo:
         return pose_eul if flag else pose_qua
         # return pose_in_base.to_dict()
 
-    def rm_algo_end2tool(self, eu_end: rm_pose_t, flag: int = 1) -> list[float]:
+    def rm_algo_end2tool(self, eu_end: rm_pose_t, flag: int = 1) -> List[float]:
         """
         末端位姿转成工具位姿
 
@@ -4930,7 +4930,7 @@ class Algo:
                 - 1: 返回使用欧拉角表示姿态的位姿列表[x,y,z,rx,ry,rz]
 
         Returns:
-            list[float]: 基于工作坐标系和工具坐标系的末端位姿
+            List[float]: 基于工作坐标系和工具坐标系的末端位姿
         """
         end_pose = rm_algo_end2tool(self.handle, eu_end)
         position = end_pose.position
@@ -4943,7 +4943,7 @@ class Algo:
         return pose_eul if flag else pose_qua
         # return end_pose.to_dict()
 
-    def rm_algo_tool2end(self, eu_tool: rm_pose_t, flag: int = 1) -> list[float]:
+    def rm_algo_tool2end(self, eu_tool: rm_pose_t, flag: int = 1) -> List[float]:
         """
         工具位姿转末端位姿
 
@@ -4954,7 +4954,7 @@ class Algo:
                 - 1: 返回使用欧拉角表示姿态的位姿列表[x,y,z,rx,ry,rz]
 
         Returns:
-            list[float]: 基于世界坐标系和默认工具坐标系的末端位姿
+            List[float]: 基于世界坐标系和默认工具坐标系的末端位姿
         """
         end_pose = rm_algo_tool2end(self.handle, eu_tool)
         position = end_pose.position
@@ -4967,12 +4967,12 @@ class Algo:
         return pose_eul if flag else pose_qua
         # return end_pose.to_dict()
 
-    def rm_algo_rotate_move(self, curr_joint: list[float], rotate_axis: int, rotate_angle: float, choose_axis: rm_pose_t, flag: int = 1) -> list[float]:
+    def rm_algo_rotate_move(self, curr_joint: List[float], rotate_axis: int, rotate_angle: float, choose_axis: rm_pose_t, flag: int = 1) -> List[float]:
         """
         计算环绕运动位姿
 
         Args:
-            curr_joint (list[float]): 当前关节角度 单位°
+            curr_joint (List[float]): 当前关节角度 单位°
             rotate_axis (int): 旋转轴: 1:x轴, 2:y轴, 3:z轴
             rotate_angle (float): 旋转角度: 旋转角度, 单位(度)
             choose_axis (rm_pose_t): 指定计算时使用的坐标系
@@ -4981,7 +4981,7 @@ class Algo:
                 - 1: 返回使用欧拉角表示姿态的位姿列表[x,y,z,rx,ry,rz]
 
         Returns:
-            list[float]: 目标位姿
+            List[float]: 目标位姿
         """
         if self.arm_dof != 0:
             curr_joint = (c_float * self.arm_dof)(*curr_joint)
@@ -4999,12 +4999,12 @@ class Algo:
         return pose_eul if flag else pose_qua
         # return pose.to_dict()
 
-    def rm_algo_cartesian_tool(self, curr_joint: list[float], move_lengthx: float, move_lengthy: float, move_lengthz: float, flag: int = 1) -> list[float]:
+    def rm_algo_cartesian_tool(self, curr_joint: List[float], move_lengthx: float, move_lengthy: float, move_lengthz: float, flag: int = 1) -> List[float]:
         """
         计算沿工具坐标系运动位姿
 
         Args:
-            curr_joint (list[float]): 当前关节角度，单位：度
+            curr_joint (List[float]): 当前关节角度，单位：度
             move_lengthx (float): 沿X轴移动长度，单位：米
             move_lengthy (float): 沿Y轴移动长度，单位：米
             move_lengthz (float): 沿Z轴移动长度，单位：米
@@ -5013,7 +5013,7 @@ class Algo:
                 - 1: 返回使用欧拉角表示姿态的位姿列表[x,y,z,rx,ry,rz]
 
         Returns:
-            list[float]: 目标位姿
+            List[float]: 目标位姿
         """
         if self.arm_dof != 0:
             curr_joint = (c_float * self.arm_dof)(*curr_joint)
@@ -5031,17 +5031,17 @@ class Algo:
         return pose_eul if flag else pose_qua
         # return pose.to_dict()
 
-    def rm_algo_pose_move(self, poseCurrent: list[float], deltaPosAndRot: list[float], frameMode: int) -> list[float]:
+    def rm_algo_pose_move(self, poseCurrent: List[float], deltaPosAndRot: List[float], frameMode: int) -> List[float]:
         """
         计算Pos和Rot沿某坐标系有一定的位移和旋转角度后，所得到的位姿数据
 
         Args:
-            poseCurrent (list[float]): 当前时刻位姿（欧拉角形式）
-            deltaPosAndRot (list[float]): 移动及旋转数组，位置移动（单位：m），旋转（单位：度）
+            poseCurrent (List[float]): 当前时刻位姿（欧拉角形式）
+            deltaPosAndRot (List[float]): 移动及旋转数组，位置移动（单位：m），旋转（单位：度）
             frameMode (int): 坐标系模式选择 0:Work（work即可任意设置坐标系），1:Tool
 
         Returns:
-            list[float]: 平移旋转后的位姿
+            List[float]: 平移旋转后的位姿
         """
         po1 = rm_pose_t()
         po1.position = rm_position_t(*poseCurrent[:3])
@@ -5159,11 +5159,11 @@ class RoboticArm(ArmState, MovePlan, JointConfigSettings, JointConfigReader, Arm
         """
         return rm_set_arm_run_mode(self.handle, mode)
 
-    def rm_get_arm_run_mode(self) -> tuple[int, int]:
+    def rm_get_arm_run_mode(self) -> Tuple[int, int]:
         """获取真实/仿真模式
 
         Returns:
-            tuple[int, int]: 包含两个元素的元组。
+            Tuple[int, int]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - 1: 控制器返回false，参数错误或机械臂状态发生错误。
@@ -5176,15 +5176,15 @@ class RoboticArm(ArmState, MovePlan, JointConfigSettings, JointConfigReader, Arm
         ret = rm_get_arm_run_mode(self.handle, byref(mode))
         return ret, mode.value
 
-    def rm_get_robot_info(self) -> tuple[int, dict[str, any]]:
+    def rm_get_robot_info(self) -> Tuple[int, Dict[str, any]]:
         """获取机械臂基本信息
         Returns:
-            tuple[int, dict[str, any]]: 包含两个元素的元组。
+            Tuple[int, Dict[str, any]]: 包含两个元素的元组。
             - int: 函数执行的状态码。
                 - 0: 成功。
                 - -1: 未找到对应句柄,句柄为空或已被删除。
                 - -2: 获取到的机械臂基本信息非法，检查句柄是否已被删除。
-            - dict[str, any]: 返回当前工具坐标系字典，键为rm_robot_info_t结构体的字段名称。
+            - Dict[str, any]: 返回当前工具坐标系字典，键为rm_robot_info_t结构体的字段名称。
         """
         info = rm_robot_info_t()
         ret = rm_get_robot_info(self.handle, info)
